@@ -26,3 +26,56 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+#teacher_card{
+  direction: -ms-flexbox;
+  display: flex;
+}
+ion-card-title{
+  color: #000;
+  font-size: 14px;
+}
+ion-card-subtitle{
+  color: #000000b7;
+}
+ion-img{
+  position: absolute;
+  display: flex;
+  width: 120px;
+  height: 120px;
+}
+ion-card ion-img{
+  margin-left: 80%;
+  margin-top: -13%;
+}
+ion-card ion-button{
+  color: #fff;
+  --background:#000;
+  font-size: 10px;
+  padding-top: 15px;
+}
+ion-card ion-button:hover{
+  color: #000;
+  --background:#f69e12;
+  padding-top: 16px;
+}
+ion-tabs{
+  position:fixed;
+}
+#cal{
+  font-size: 12px;
+  margin-bottom: 0%;
+  margin-left: 4px;
+  color: #000;
+  font-weight: 800;
+  margin-inline-end: 8px;
+}
+#clg_logo{
+  margin-top: -26px;
+  margin-left: 37%;
+  font-weight: 800;
+  width: 120px;
+  height: 40px;
+}
+ion-segment ion-label{
+  font-size: 12px;
+}

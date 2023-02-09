@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons  slot="start">
+    <ion-buttons slot="start">
       <ion-menu-button color="light"></ion-menu-button>
     </ion-buttons>
     <ion-title>Home</ion-title>
@@ -14,13 +14,15 @@
       <ion-card-title>Hello, Devyani Kamle</ion-card-title>
       <ion-img src="./../../assets/icon/teacher (4).png" alt=""></ion-img>
       <ion-button>Take Attendance</ion-button>
-      <p  id="cal"><ion-icon id="cal" color="light" name="calendar-sharp"></ion-icon>  04/02/2023</p>
+      <p id="cal"><ion-icon id="cal" color="light" name="calendar-sharp"></ion-icon>
+        04/02/2023</p>
     </ion-card-header>
   </ion-card>
 
 
 
-  <ion-segment color="warning" value="Present">
+  <ion-segment color="warning" value="Present" [(ngModel)]="type"
+    (ionChange)="segmentChanged($event)" scrollable>
     <ion-segment-button value="Present">
       <ion-label color="light">Present</ion-label>
     </ion-segment-button>
@@ -29,38 +31,51 @@
     </ion-segment-button>
   </ion-segment>
 
+  <div id="List" [ngSwitch]="type">
+    <ion-list *ngSwitchCase="'Present'">
+      <ion-item *ngFor="let stud of Present">
+        <ion-thumbnail slot="start">
+          <img src="../../assets/icon/teacher (1).png">
+        </ion-thumbnail>
+        <div>
+          <h6 id="stud_name"><strong>Name:</strong> {{stud.name}}</h6>
+          <h6 id="stud_roll"><strong>Roll No:</strong> {{stud.Roll}}</h6>
+        </div>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Absent'">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="../../assets/icon/teacher (2).png">
+        </ion-thumbnail>
+        <div>
+          <h6 id="stud_name"><strong>Name:</strong> Siddhant Yadav</h6>
+          <h6 id="stud_roll"><strong>Roll No:</strong> 45</h6>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
 
 
-  <ion-list>
-    <ion-list-header>
-      <ion-label>Present Student</ion-label>
-    </ion-list-header>
-    <ion-item>
-      <ion-label>Paresh Chaudhari</ion-label>
-    </ion-item>
-  </ion-list>
-  
-  
-  
+
 </ion-content>
 <ion-toolbar>
-<ion-tabs >
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="schedule">
-      <ion-icon color="light" name="home"></ion-icon>
-      <ion-label color="light">Home</ion-label>
-    </ion-tab-button>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="schedule">
+        <ion-icon color="light" name="home"></ion-icon>
+        <ion-label color="light">Home</ion-label>
+      </ion-tab-button>
 
-    <ion-tab-button tab="speakers">
-      <ion-icon color="medium" name="person-circle"></ion-icon>
-      <ion-label color="medium">Account</ion-label>
-    </ion-tab-button>
+      <ion-tab-button tab="speakers">
+        <ion-icon color="medium" name="person-circle"></ion-icon>
+        <ion-label color="medium">Account</ion-label>
+      </ion-tab-button>
 
-    <ion-tab-button tab="about">
-      <ion-icon color="medium" name="settings"></ion-icon>
-      <ion-label color="medium">Settings</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
-</ion-toolbar>
-
+      <ion-tab-button tab="about">
+        <ion-icon color="medium" name="settings"></ion-icon>
+        <ion-label color="medium">Settings</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>

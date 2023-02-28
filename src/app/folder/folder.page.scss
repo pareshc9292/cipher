@@ -30,6 +30,7 @@ ion-menu-button {
 #teacher_card {
   direction: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 ion-card-title {
@@ -44,13 +45,13 @@ ion-card-subtitle {
 ion-img {
   position: absolute;
   display: flex;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
 }
 
 ion-card ion-img {
-  margin-left: 80%;
-  margin-top: -13%;
+  width: 100%;
+  height: auto;
 }
 
 ion-card ion-button {
@@ -102,6 +103,60 @@ ion-segment ion-label {
 }
 
 #List {
-  overflow: scroll;
-  height: 270px;
+  height: auto;
+}
+
+@media only screen and (min-width: 300px) {
+  ion-card ion-img {
+    position: absolute;
+    top: 0;
+    left: 180px;
+  }
+  #clg_logo{
+    left: 80px;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  ion-card ion-img {
+    position: absolute;
+    top: 0;
+    left: 260px;
+  }
+  #clg_logo{
+    left: 100px;
+  }
+}
+
+@media only screen and (min-width: 460px) {
+  ion-card ion-img {
+    position: absolute;
+    top: 0;
+    left: 280px;
+  }
+  #clg_logo{
+    left: 160px;
+  }
+}
+
+@media only screen and (min-width: 580px) {
+  ion-card ion-img {
+    position: absolute;
+    top: 0;
+    left: 390px;
+  }
+  #clg_logo{
+    left: 260px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  ion-card ion-img {
+    position: absolute;
+    top: 0;
+    left: 600px;
+  }
+  #clg_logo{
+    left: 420px;
+  }
 }

@@ -16,6 +16,13 @@ export class FolderPage implements OnInit {
     {name: 'Balaji', Roll: '28'},
     {name: 'Aditya', Roll: '51'},
     {name: 'Balaji', Roll: '28'},
+
+    {name: 'Paresh', Roll: '35'},
+    {name: 'Siddhant', Roll: '45'},
+    {name: 'Aditya', Roll: '51'},
+    {name: 'Balaji', Roll: '28'},
+    {name: 'Aditya', Roll: '51'},
+    {name: 'Balaji', Roll: '28'},
   ]
 
   constructor(private activatedRoute: ActivatedRoute) { }
@@ -25,6 +32,5 @@ export class FolderPage implements OnInit {
   }
   segmentChanged(ev: any) {
     console.log('Segment changed', ev);
-  }
-
+  } 
 }

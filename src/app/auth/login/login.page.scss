@@ -32,3 +32,16 @@ ion-item{
     text-transform: initial;
     margin-top: 10px;
 }
+.loginbtn{
+    color:#ffb833;
+    --background: #fff;
+    font-size: 16px;
+    font-weight: 1000;
+    --border-radius: 30px;
+}
+.loginbtn:hover{
+    color:#fff;
+    --background: #ffd534;
+    font-weight: 1000;
+    --border-radius: 30px;
+}

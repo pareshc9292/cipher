@@ -14,12 +14,16 @@ export class FolderPage implements OnInit {
   type = 'Present';
   public folder!: string;
   Present = [
-    {name: 'Paresh', Roll: '35'},
-    {name: 'Anurag', Roll: '45'},
-    {name: 'Nilay', Roll: '51'},
-    {name: 'Balaji', Roll: '28'},
-    {name: 'Shrivatsa', Roll: '51'},
-    {name: 'Shruti', Roll: '52'},
+    {name: 'Paresh', Roll: '1'},
+    {name: 'Anurag', Roll: '2'},
+    {name: 'Nilay', Roll: '4'},
+    {name: 'Balaji', Roll: '8'},
+    {name: 'Shrivatsa', Roll: '9'},
+    {name: 'Shruti', Roll: '10'},
+    {name: 'Bhawika', Roll: '14'},
+    {name: 'Vedant', Roll: '15'},
+    {name: 'Pritesh', Roll: '16'},
+    {name: 'Vaishnavi', Roll: '20'},
   ]
   dateTime: string | undefined;
   constructor(private activatedRoute: ActivatedRoute, public photoService: PhotoService) {}

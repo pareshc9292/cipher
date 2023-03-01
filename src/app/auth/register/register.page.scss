@@ -1,0 +1,52 @@
+.homeIcon{
+    font-size: 25px;
+    left: 20px;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+ion-button[color="dark"]{
+    text-transform: initial;
+}
+ion-card-title{
+    --color:#fff;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    padding-top: 30px;
+}
+.curve{
+ --background:#ffb833;
+ border-radius: 40px 2px 40px 2px;
+}
+ion-item{
+    border-radius: 20px;
+    --background:var(--background);
+    color:#fff;
+}
+.form-control:focus + .form-label {
+    color: red;
+  } 
+
+.registerbtn{
+    --color:#fff;
+    text-transform: initial;
+    margin-top: 10px;
+}
+.loginbtn{
+    color:#ffb833;
+    --background: #fff;
+    font-size: 16px;
+    font-weight: 1000;
+    --border-radius: 30px;
+    margin-top: 30px;
+}
+.loginbtn:hover{
+    color:#fff;
+    --background: #ffd534;
+    font-weight: 1000;
+    --border-radius: 30px;
+}

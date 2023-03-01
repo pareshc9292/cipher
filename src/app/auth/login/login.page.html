@@ -3,10 +3,39 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
    </ion-buttons>
-    <ion-title>login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-</ion-content>
+ 
+  
+  
+<div class="flex-center">
+    <ion-card class="curve">
+      <ion-card-header>
+        <ion-card-title >Login</ion-card-title>
+        
+      </ion-card-header>
+    
+      <ion-card-content class="form-control" >
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="Password"></ion-input>
+        </ion-item>
+        <ion-button color="dark" fill="clear" size="full">Forgot Email/Password</ion-button>
+        <ion-button class="loginbtn" size="full">Login</ion-button> 
+        <ion-button routerLink="/register" class="registerbtn" fill="clear" size="full">Don't have account?<br> Register</ion-button>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+  
+  
+  
+

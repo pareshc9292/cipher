@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DatePipe } from '@angular/common';
+import {formatDate} from '@angular/common';
 
 @Component({
   selector: 'app-folder',
@@ -7,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./folder.page.scss'],
 })
 export class FolderPage implements OnInit {
+  today = Date.now();
   type = 'Present';
   public folder!: string;
   Present = [
@@ -15,7 +18,7 @@ export class FolderPage implements OnInit {
     {name: 'Aditya', Roll: '51'},
     {name: 'Balaji', Roll: '28'},
     {name: 'Aditya', Roll: '51'},
-    {name: 'Balaji', Roll: '28'},
+    {name: 'Shruti', Roll: '52'},
 
     {name: 'Paresh', Roll: '35'},
     {name: 'Siddhant', Roll: '45'},
@@ -24,13 +27,17 @@ export class FolderPage implements OnInit {
     {name: 'Aditya', Roll: '51'},
     {name: 'Balaji', Roll: '28'},
   ]
+  dateTime: string | undefined;
+  constructor(private activatedRoute: ActivatedRoute ) { 
+    
+  }
 
-  constructor(private activatedRoute: ActivatedRoute) { }
-
-  ngOnInit() {
+  ngOnInit(): void {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
   }
   segmentChanged(ev: any) {
     console.log('Segment changed', ev);
   } 
+  
+
 }
